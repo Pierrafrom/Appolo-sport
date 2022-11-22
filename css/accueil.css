@@ -1,0 +1,130 @@
+@charset "utf-8";
+
+/*Acceuil*/
+
+#Home {                 /*la section home prend toute la taille de l'écran lorsqu'on arrive sur site, ainsi on ne voit que le titre et solgan à l'ouverture de la page*/
+height: 100vh;
+ }                  
+           
+#Home h1{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12em;
+    padding-top: calc(100vh - 85vh);
+    display: block;                                   /*Le display block servia dans les requêtes media queries pour afficher le texte en plusieurs lignes au besoin*/
+    width: 1306px;
+    margin: auto;
+}
+
+#Home h2{
+    font-size: 7em;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    display: block;                                   
+    width: 1306px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+
+#Home h1 span{
+    color: gold;                /*affichage de la première lettre du nom de la marque en jaune*/
+}
+
+/*texte présentation*/
+
+#presentation{
+    background-color: rgb(255, 255, 255, 0.65);     /*couleur de fond du texte*/
+    border-radius: 45px;                            
+    margin: 2%;
+    padding: 2%;
+}
+
+#presentation h2{
+    color:black;
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+#presentation p{
+    color: black;
+    font-size: 1.7em;
+    margin-bottom: 2%;
+}
+
+/*video*/
+
+.video{
+	display: block;
+	margin: auto;
+    height: 32.5vw;             /* le rapport entre la hauteur et la largeur de la vidéo originale et de 1:2 donc on conserve ce rapport pour ne pas deformer la video*/
+    width: 75vw;
+}
+
+
+/*responsiv de la page d'acceuil*/
+
+@media screen and (min-width:1001px) and (max-width:1320px) {
+    #Home h1{
+        font-size: 11em;             /*on recentre le texte, on l'affiche sur 2 lignes et on adapte la taille de la police*/
+        width: 660px;
+        padding-top: calc(100vh - 90vh);
+    }
+    
+    #Home h2{                   
+        font-size: 6em;
+        width: 580px;
+    }
+    
+}
+
+@media screen and (min-width:551px) and (max-width:1000px) {
+    #Home h1{
+        font-size: 9em;             /*on recentre le texte, on l'affiche sur 2 lignes et on adapte la taille de la police*/
+        width: 545px;
+        padding-top: calc(100vh - 75vh);
+    }
+    
+    #Home h2{                   
+        font-size: 4em;
+        width: 385px;
+    }
+
+    #presentation h2{            /*adaptation de la taille de la police*/
+        font-size: 2.3em;
+    }
+
+    #presentation p{
+        font-size: 1.3em;
+    }
+    
+}
+
+@media screen and (max-width:550px) {
+    #Home h1{
+        font-size: 5em;             /*on recentre le texte, on l'affiche sur 2 lignes et on adapte la taille de la police*/
+        width: 345px;
+        padding-top: calc(100vh - 70vh);
+    }
+    
+    #Home h2{                   
+        font-size: 3em;
+        width: 345px;
+        margin-top: 150px;
+    }
+
+    #presentation{                /*adaptation de la taille de la police et augmentation des marges/paddings car ils deviennent trop petits*/
+        margin:4%;
+        padding:3%;
+    }
+
+    #presentation h2{
+        font-size: 2em;
+    }
+
+    #presentation p{
+        font-size: 1.1em;
+    }
+    
+}

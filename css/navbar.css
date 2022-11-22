@@ -1,0 +1,178 @@
+@charset "utf-8";
+
+/*La barre de navigation est composé de 2 éléments principaux, le nav et le navmenu.
+Le navmenu est un éléments qui contient tous les liens vers les différentes pages. Il prend toute la largeure de la page et a une 
+hauteur de 10vh en mode desktop.
+En mode smartphone, le navmenu apparait ou disparait en cliquant sur le menu hamburger et il prend la page entière .
+Le nav quand à lui est invisible en mode desktop (il est caché derrière le navmenu).
+Il apparait en mode smartphone car navmenu disparait, il contient alors le bouton hamburger permettant d'afficher navmenu.*/
+
+nav {
+    width: 100vw;
+    height: 10vh;
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 4; /*on lui met un z-index 4 pour qu'elle soit en dessous du navmenu mais au dessus des autres éléments de la page */
+}
+
+.navmenu {
+    display: flex; /*le navmenu contient tout les liens vers un autre page.*/
+    justify-content: space-between; /*les liens sont tous alignés et centrés*/
+    align-items: center;
+    background-color: grey;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 10vh;
+    min-height: 120px;
+    z-index: 5; /*on la place au dessus de toute la page */
+}
+
+.logo img { /*on definit la taille du logo et de l'icone panier*/
+    width: auto;
+    height: 8vh;
+    min-height: 100px;
+}
+
+.panier img {
+    width: auto;
+    height: 5vh;
+}
+
+.navmenu a {
+    margin-right: 25px;
+    color: white;
+    font-size: 2em;
+}
+
+/*Le lien vers la page produit est en fait un bouton qui sert à faire apparaitre un menu deroulant.
+Le menu deroulant contient les liens vers les pages des differents produits du site.*/
+.navmenu button {
+    background-color: transparent; /*on maquille le boutton pour qu'il soit identique aux autre liens du menu de navigation*/
+    border: none;
+    outline: none;
+    cursor: pointer;
+    z-index: 6;
+    font-family: 'helvetica neue', sans-serif;
+    height: 10vh;
+    min-height: 120px;
+    font-size: 1em;
+}
+
+.navmenu .dropitems {
+    display: none; /*on cache le menu deroulant en temps normal*/
+}
+
+@media screen and (min-width:1001px) {
+    .navmenu .dropdown:hover .dropitems { /*le menu deroulant apparait quand on passe la souris sur le boutton produits*/
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        position: absolute; /*il est en position absolue car il doit toujours etre en dessous de produit*/
+        padding: 5%;
+        background-color: lightgrey;
+        height: 300px;
+        width: 150px;
+    }
+}
+
+.navmenu .dropitems a {
+    margin: 0;
+    color: black;
+    font-size: 1.5em;
+}
+
+.navmenu .down { /*la fleche vers le bas servira à afficher le menu deroulant en mode smartphone, elle est donc invisible en mode desktop*/
+    display: none;
+}
+
+nav .hamburger { /*le boutton hamburger sert à faire apparaitre/disparaitre le navmenu en mode smartphone, il est invisible en mode desktop*/
+    fill: white;
+    display: none;
+    cursor: pointer;
+    position: fixed;
+    right: 50px;
+    top: 40px;
+    z-index: 6; /*il doit passer au dessus du navmenu donc on lui met un z-index:6*/
+}
+
+nav input {
+    display: none;
+}
+
+/*responsive*/
+@media screen and (max-width:1000px) {
+    .navmenu { /*on change la taille du navmenu pour qu'il prenne toute la taille de l'écran et on le rend invisible*/
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        display: none;
+    }
+
+    nav {
+        background-color: grey; /*le navmenu disparait et est remplacé par nav qui contient le bouton hamburger*/
+        position: fixed;
+    }
+
+        nav .hamburger {
+            display: block; /*le boutton hamburger apparait*/
+        }
+
+    #button:checked ~ .navmenu {
+        display: flex; /*lorsque le boutton hamburger est cliqué, navmenu apparait*/
+    }
+
+    .navmenu .down {
+        display: inline-block; /*la fleche vers le bas apparait à coté du boutton produit*/
+    }
+
+        .navmenu .down img {
+            height: 1.4em;
+            width: auto;
+            cursor: pointer;
+        }
+
+    .navmenu a {
+        margin-top: 23vh;
+        margin-bottom: 18vh;
+    }
+
+    .navmenu .logo {
+        position: absolute;
+        left: 25px;
+        top: 20px;
+        margin-top: 0;
+    }
+    /*on adapte la position et la taille des liens ainsi que celles du logo*/
+
+    a.panier {
+        display: block;
+        margin: auto;
+        position: absolute;
+        z-index: 6;
+        top: 30px;
+        margin-top: 0;
+    }
+
+    .navmenu .dropitems a {
+        display: block;
+    }
+
+    /*Un utilsateur sur smartphone n'a pas de souris donc il ne peut pas aficher le menu deroulant si celui-ci s'affiche au survol de la souris.
+    Il faut donc créer un boutton (la fleche vers le bas) qui permet d'afficher le menu deroulant quand on clique dessus*/
+    #button2:checked ~ .dropitems {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        position: absolute; /*il est en position absolue car il doit toujours etre en dessous de produit*/
+        padding: 5%;
+        background-color: lightgrey;
+        height: 150px;
+        width: 140px;
+        border-radius: 20px;
+    }
+}

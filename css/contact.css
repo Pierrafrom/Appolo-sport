@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+/*contact*/
+#info{
+    height: 20vh;                   /*on affiche les infos de contact en colonnes au debut de la pages*/
+    background-color:  rgb(255, 255, 255, 0.65);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2%;
+    border-radius: 25px;
+    padding: 20px;
+}
+
+#info h2{
+    text-decoration: underline;
+    color: black;
+}
+
+#info a , #info p{
+    color: black;
+}
+
+.formlink{              /*lien vers le formulaire de contact*/
+    display: block;
+    margin: auto;
+    width: 10vw;
+    text-align: center;
+    background-color: goldenrod;
+    padding: 15px;
+    font-size: 1.4em;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 2%;
+    min-width: 150px;
+}
+
+/*map*/
+.map{
+    width: 80vw;
+    height: 40vh;
+    display: block;
+    margin: auto;
+}

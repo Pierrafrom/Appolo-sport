@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+/*footer*/
+
+footer{
+    background-color: rgb(48, 48, 48);          /*le conteneur contient 3 div qu'on affiche en ligne*/
+    width:100vw;
+    height: 10vh;
+    display: flex;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5vh;
+}
+
+footer div{                     /*chaque div contient des informations qu'on affiche alliignées en colonnes*/
+    display: flex;
+    flex-direction: column;
+    height:100%;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    width: 250px;
+}
+
+footer .membre{                 /*on met un padding à la div de droite pour qu'elle ne soit pas collé au bord de l'écran*/
+    padding-right: 20px;
+    border: none;
+}
+
+footer .rapport{            /*on met un padding à la div de gauche pour qu'elle ne soit pas collé à l'écran*/
+    padding-left: 20px;
+}
+
+footer p{
+    font-size: 1.1em;                   
+    text-decoration: underline;
+}
+
+footer a{
+    font-size: 0.8em;
+    color:white;
+}
+
+footer .docx{
+    padding: 8px;
+    background-color: rgb(25, 25, 160);
+    border-radius: 3px;
+}
+
+footer .pdf{
+    padding: 8px;
+    background-color: rgb(204, 18, 18);
+    border-radius: 3px;
+}
+
+@media screen and (max-width:900px) {
+    footer{
+        flex-direction: column;             /*en mode smartphone le footer affiche les div en colonnes pour mieux s'adpter à l'écran*/
+        height: auto;
+    }
+
+    footer .membre{
+        padding-right: 0;               
+    }
+
+    footer .rapport{
+        padding-left: 0;
+    }
+
+    footer div{
+        margin-top:20px;                /*on adapte la taille pour espacer les éléments entre eux*/
+        margin-bottom: 20px;
+        height:10vh;
+    }
+}
