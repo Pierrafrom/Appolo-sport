@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" >
+    <title>Apollo_Sport/Contact/Formulaire</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" >
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <a href="index.html" class="logo">
+          <img src="img/logo.png" alt="logo" >
+        </a>
+        <label for="button" class="hamburger">
+          <svg viewBox="0 0 100 80" width="40" height="40">
+            <rect width="100" height="15" fill="white"></rect>
+            <rect y="35" width="100" height="15" fill="white"></rect>
+            <rect y="70" width="100" height="15" fill="white"></rect>
+          </svg>
+        </label>
+        <input type="checkbox" id="button" >
+        <div class="navmenu">
+          <a href="index.html" class="logo">
+            <img src="img/logo.png" alt="logo" >
+          </a>
+          <a href="index.html">Home</a>
+          <div class="dropdown">
+            <a href="produits.html">Produits</a>
+            <label for="button2" class="down">
+              <img src="img/fleche_bas.png" alt="flèche" >
+            </label>
+            <input type="checkbox" id="button2" >
+            <div class="dropitems">
+              <a href="tenues.html">Tenues</a>
+              <a href="crampons.html">Crampons</a>
+              <a href="accessoires.html">Accessoires</a>
+            </div>
+          </div>
+          <a href="contact.html">Contact</a>
+          <a href="achat.html" class="panier">
+            <img src="img/panier.png" alt="panier" >
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="Title">
+        <h1><span>A</span>ppolo Sport</h1>
+      </section>
+      <form>
+        <h2>Achat</h2>
+        <div class="separation"></div>
+        <div class="gauche">
+          <label for="prenom">Prénom:</label>
+          <input
+            type="text"
+            id="prenom"
+            name="prenom"
+            placeholder="Ex:Michel"
+          >
+          <label for="nom">Nom:</label>
+          <input type="text" id="nom" name="nom" placeholder="Ex:Platini">
+          <label for="Produit">Produit que vous voulez commander:</label>
+          <input
+            type="text"
+            id="Produit"
+            name="objet"
+            placeholder="Ex:Crampons Nike n°1"
+          >
+        </div>
+        <div class="droite">
+          <label for="email">Votre email:</label>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            placeholder="Ex:appolosport@gmail.com"
+          >
+          <label for="tel">Votre numéro de téléphone:</label>
+          <input
+            type="text"
+            id="tel"
+            name="tel"
+            placeholder="Ex:+33621322132"
+          >
+          <label for="date">Qui voulez-vous contacter?</label>
+          <input
+            type="text"
+            id="date"
+            name="date"
+            placeholder="Pierre ou Yassine (laisser vide pour les deux)"
+          >
+        </div>
+        <div class="submit">
+          <button>Envoyer</button>
+          <a href="contact.html" class="submit-button">Annuler</a>
+        </div>
+        <div class="whatsapp">
+          <p>
+            Vous pouvez aussi nous contacter sur whatsapp pour acheter nos
+            produits
+          </p>
+          <a href="https://wa.me/+33768939938" target="_blank">
+            <img alt="Chat on WhatsApp" src="img/whatsapp.png" >
+            Chat on WhatsApp
+          </a>
+        </div>
+      </form>
+    </main>
+
+    <footer>
+      <div class="rapport">
+        <p>Rapport du projet</p>
+        <a href="Rapport.docx" download="Rapport.docx" class="docx"
+          >Download Word</a
+        >
+        <a href="Rapport.pdf" download="Rapport.pdf" target="_blank" class="pdf"
+          >Download PDF</a
+        >
+      </div>
+      <div>
+        <p>codé par Pierre Fromont</p>
+        <a href="https://github.com/Pierrafrom" target="_blank">Github</a>
+        <a href="tel:+33768939938">O7 68 93 99 38</a>
+        <a href="mailto:pierre.fromont@universite-paris-saclay.fr"
+          >pierre.fromont@universite-paris-saclay.fr</a
+        >
+      </div>
+      <div class="membre">
+        <p>et par Yassine Matrouf</p>
+        <a href="CVYassine/CV.htm" target="_blank">CV</a>
+        <a href="tel:+33768939938">O6 43 30 48 19</a><br >
+        <a href="mailto:yassine.matrouf@universite-paris-saclay.fr"
+          >yassine.matrouf@universite-paris-saclay.fr</a
+        >
+      </div>
+    </footer>
+  </body>
+</html>
