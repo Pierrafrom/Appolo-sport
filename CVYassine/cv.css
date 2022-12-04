@@ -1,0 +1,35 @@
+h1 {
+	color:darkblue;
+	font-family: Trebuchet MS;
+	font-size: 32px;
+}
+
+img {
+	width:25%;
+	height:auto;
+}
+
+figcaption {
+	float:left;
+    color: darkblue;
+    font-style: italic;
+	font-size: smaller;
+	font-family:Arial;
+    padding: 3px;
+    text-align: center;
+	width:25%;
+}
+
+ul {
+list-style-type: '-';
+}
+
+ul.rouge{
+list-style-type:upper-alpha;
+}
+
+
+
+
+
+

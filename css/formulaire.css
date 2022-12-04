@@ -1,0 +1,140 @@
+@charset "utf-8";
+
+/*Formulaire*/
+
+form {
+  background-color: white; /*definition du bloc formulaire*/
+  color: black;
+  display: block;
+  height: 720px;
+  width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  border-radius: 10px;
+  box-shadow: 13px 15px 30px black;
+  padding: 1%;
+}
+
+form h2 {
+  display: flex;
+  height: 15%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+form .separation {
+  /*la division separation est un trait noir entre le titre du formulaire et son contenu*/
+  height: 3px;
+  background-color: black;
+  width: 100%;
+  margin-top: calc(1.5% - 1.5px);
+  margin-bottom: calc(1.5% - 1.5px);
+  border-radius: 45px;
+}
+
+.gauche,
+.droite {
+  /*les 6 premiers champs sont affichés en 2 colonnes (droite et gauche)*/
+  display: inline-block;
+  height: 30%;
+  width: 49%;
+  margin-bottom: 20px;
+}
+
+form label {
+  padding: 5px;
+}
+
+form input {
+  width: 100%;
+  display: block;
+  margin: auto;
+  background-color: rgb(235, 235, 235);
+  border: none;
+  margin-bottom: 5%;
+  height: 35px;
+  margin-top: 3px;
+  border-radius: 5px;
+}
+
+.gauche {
+  margin-right: 5px;
+}
+
+.message {
+  height: 40%; /*le champs où l'on écrit le message est plus grand que les premiers*/
+  width: 100%;
+}
+
+.message textarea {
+  height: 85%;
+  width: 100%;
+  display: block;
+  margin: auto;
+  background-color: rgb(235, 235, 235);
+  border: none;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+/*la div submit est la div qui contient 2 boutons, le premier envoie le message et le second annule et rammene vers la page contact*/
+.submit {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3px;
+}
+
+.submit .submit-button,
+.submit button {
+  height: 35px;
+  width: 100px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "SF Pro Display", sans-serif;
+  font-size: 18px;
+}
+
+.submit a {
+  color: white;
+}
+
+@media screen and (max-width: 1000px) {
+  #Form {
+    padding-top: 155px; /*les parametres de la navbar changent( .navmenu qui disparait et nav apparait en postion absolute) donc on rajoute un padding pour éviter que le main se décale vers le haut*/
+  }
+}
+
+@media screen and (max-width: 750px) {
+  form {
+    height: 122vh;
+    width: 80vw; /*le formulaire n'est plus un carré mais un rectangle*/
+  }
+
+  .gauche,
+  .droite {
+    /*les champs affichés en 2 colonnes sont maintenant affichés en 1 seule colone*/
+    display: block;
+    width: 100%;
+    margin-bottom: 0;
+    height: auto;
+  }
+
+  .message {
+    height: 30%; /* on readapte certains éléments pour plus de lisibilité*/
+  }
+
+  .submit {
+    height: auto;
+  }
+}

@@ -1,0 +1,121 @@
+@charset "utf-8";
+
+/*Acceuil*/
+
+#Home {
+  /*la section home prend toute la taille de l'écran lorsqu'on arrive sur site, ainsi on ne voit que le titre et solgan à l'ouverture de la page*/
+  height: 100vh;
+}
+
+#Home h1 {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 120px;
+  padding-top: calc(100vh - 85vh);
+}
+
+#Home h2 {
+  font-size: 65px;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  margin-top: 100px;
+}
+
+#Home h1 span {
+  color: gold; /*affichage de la première lettre du nom de la marque en jaune*/
+}
+
+/*texte présentation*/
+
+#presentation {
+  background-color: rgb(255, 255, 255, 0.65); /*couleur de fond du texte*/
+  border-radius: 45px;
+  margin: 2%;
+  padding: 2%;
+}
+
+#presentation h2 {
+  color: black;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+#presentation p {
+  color: black;
+  font-size: 20px;
+  margin-bottom: 2%;
+}
+
+/*video*/
+
+.video {
+  display: block;
+  margin: auto;
+  max-width: 800px;
+  max-height: 400px;
+  margin-top: 15px;
+  height: 32.5vw; /* le rapport entre la hauteur et la largeur de la vidéo originale et de 1:2 donc on conserve ce rapport pour ne pas deformer la video*/
+  width: 75vw;
+  border: none;
+}
+
+/*Logo affiché en grand*/
+.big-logo{
+  width: 70vw;
+  height: auto;
+  min-width: 300px;
+  max-width: 600px;
+  display: block;
+  margin: auto;
+}
+
+/*responsiv de la page d'acceuil*/
+/*mode tablette*/
+@media screen and (min-width: 401px) and (max-width: 1000px) {
+  #Home h1 {
+    /*on recentre le texte et on adapte la taille de la police*/
+    font-size: 100px;
+    padding-top: calc(100vh - 70vh);
+  }
+
+  #Home h2 {
+    font-size: 45px;
+  }
+
+  #presentation {
+    margin: 0;
+  }
+
+  #presentation h2 {
+    font-size: 25px;
+  }
+
+  #presentation p {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #Home h1 {
+    /*on recentre le texte et on adapte la taille de la police*/
+    font-size: 55px;
+    padding-top: calc(100vh - 70vh);
+  }
+
+  #Home h2 {
+    font-size: 25px;
+  }
+
+  #presentation {
+    margin: 0;
+  }
+
+  #presentation h2 {
+    font-size: 25px;
+  }
+
+  #presentation p {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+/*liens vers les différends produits*/
+
+.descr-produit{
+  font-size: 22px;
+  color: black;
+  border-radius: 20px;
+  padding: 3%;
+  margin: 3%;
+  background-color: rgb(255, 255, 255, 0.65);
+}
+
+.lien-produits {
+  display: block;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 5%;
+  background-color: rgb(255, 255, 255, 0.65);
+  border-radius: 45px;
+  height: 35vh;
+}
+
+.lien-produits a {
+  display: flex;
+  padding: 1%;
+  background-color: grey;
+  border-radius: 45px;
+}
+
+.lien-produits a p {
+  color: white;
+  margin: auto;
+  font-size: 2em;
+}
+
+.lien-produits a img {
+  width: 4%;
+  margin: auto;
+}
+
+.lien-produits p {
+  color: black;
+  padding: 2%;
+  font-size: 20px;
+}
+
+@media screen and (min-width: 551px) and (max-width: 1000px) {
+  #produits {
+    /*les parametres de la navbar changent( .navmenu qui disparait et nav apparait en postion absolute) donc on rajoute un padding pour éviter que le main se décale vers le haut*/
+    padding-top: 155px;
+  }
+
+  .lien-produits {
+    height: 40vh;
+  }
+
+  .lien-produits a p {
+    font-size: 1.6em; /*adaptation de la taille de la police*/
+  }
+
+  .lien-produits a img {
+    width: 8%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  #produits {
+    padding-top: 155px;
+  }
+
+  .lien-produits a img {
+    display: none; /*on cache les images du liens car l'ecran deviens trop petits pour afficher le texte et les images sans supperposition*/
+  }
+
+  .lien-produits {
+    /*adaptation de la taille de la zone de texte pour éviter que le texte deborde*/
+    height: 40vh;
+  }
+}

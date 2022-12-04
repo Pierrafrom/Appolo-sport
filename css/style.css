@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+/*importation des polices d'ecritures*/
+/*Titres*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+/*Textes*/
+@import url("https://fonts.cdnfonts.com/css/sf-pro-display");
+
+/*importation des autres fichiers css*/
+@import url("navbar.css");
+@import url("accueil.css");
+@import url("liste-produits.css");
+@import url("produits.css");
+@import url("footer.css");
+@import url("contact.css");
+@import url("formulaire.css");
+@import url("achat.css");
+
+/*backgroud*/
+* {
+  /*on enleve les marges par defaut des navigateurs*/
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+body {
+  /*image de fond sur l'ensemble du site*/
+  background-image: url(../img/fond.png);
+  color: white;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  font-family: "SF Pro Display", sans-serif;
+  overflow-x: hidden;
+  min-width: 350px;
+}
+
+/*Nom présent sur chaque page du site*/
+#Title h1 {
+  text-align: center;
+  font-size: 3em;
+  padding-top: 2vh;
+  font-family: "Montserrat", sans-serif;
+}
+
+#Title h1 span {
+  color: gold;
+}
+
+#Title h2 {
+  font-size: 2em;
+  text-decoration: underline;
+  margin-left: 10vw;
+  margin-top: 35px;
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 1000px) {
+  #Title {
+    padding-top: 155px; /*les parametres de la navbar changent( .navmenu qui disparait et nav apparait en postion absolute) donc on rajoute un padding pour éviter que le main se décale vers le haut*/
+  }
+}
