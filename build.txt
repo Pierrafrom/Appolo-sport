@@ -1,5 +1,0 @@
-mode telephone bug allignement navbar 
-mode telephone bug bouton download  
-accueil afficher le logo en grand
-produits info factuelles hors du texte
-panier js
